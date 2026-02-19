@@ -76,11 +76,16 @@ Na primeira execução, o backend irá automaticamente:
 
 ### 4. Acesse a aplicação
 
-| Serviço | URL |
-|---|---|
-| Frontend (app) | http://localhost |
-| Django Admin | http://localhost/admin |
-| API REST | http://localhost/api |
+| Serviço | URL | Porta |
+|---|---|---|
+| Frontend (app) | http://localhost:3000 | `3000` |
+| Django Admin | http://localhost:8000/admin | `8000` |
+| API REST | http://localhost:8000/api | `8000` |
+| PostgreSQL (local) | `localhost:5433` | `5433` |
+
+> O frontend roda na porta **3000** (Nginx dentro do container na 80).  
+> O backend (Gunicorn) fica acessível diretamente na **8000**.  
+> O PostgreSQL expõe a porta **5433** localmente para conexão via cliente externo (ex.: DBeaver), mas internamente os containers se comunicam pela **5432**.
 
 ---
 
