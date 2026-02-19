@@ -8,6 +8,11 @@ __pycache__/
 dist/
 build/
 *.egg
+.pytest_cache/
+
+# Django — arquivos gerados em tempo de build/deploy
+backend/staticfiles/
+backend/static/
 
 # Node
 node_modules/
